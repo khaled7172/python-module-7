@@ -12,7 +12,7 @@ class EliteCard(Card, Combatable, Magical):
             attack_power: int,
             health: int,
             mana: int,
-            defence: int):
+            defence: int) -> None:
         super().__init__(name, cost, rarity)
         self.attack_power = attack_power
         self.health = health
@@ -26,7 +26,7 @@ class EliteCard(Card, Combatable, Magical):
             "effect": "Elite card deployed"
         }
 
-    def attack(self, target) -> dict:
+    def attack(self, target: str) -> dict:
         return {
             "attacker": self.name,
             "target": target,

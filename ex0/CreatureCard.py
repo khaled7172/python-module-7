@@ -8,7 +8,7 @@ class CreatureCard(Card):
             cost: int,
             rarity: str,
             attack: int,
-            health: int):
+            health: int) -> None:
         super().__init__(name, cost, rarity)
         if attack <= 0:
             raise ValueError("attack must be positive")
@@ -24,7 +24,7 @@ class CreatureCard(Card):
             "effect": "Creature summoned to battlefield"
         }
 
-    def attack_target(self, target) -> dict:
+    def attack_target(self, target: str) -> dict:
         return {
             "attacker": self.name,
             "target": target,

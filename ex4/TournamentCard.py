@@ -5,7 +5,7 @@ from ex4.Rankable import Rankable
 
 class TournamentCard(Card, Combatable, Rankable):
     def __init__(self, name: str, cost: int, rarity: str,
-                 attack_power: int, health: int, card_id: str):
+                 attack_power: int, health: int, card_id: str) -> None:
         super().__init__(name, cost, rarity)
         self.attack_power = attack_power
         self.health = health
@@ -21,7 +21,7 @@ class TournamentCard(Card, Combatable, Rankable):
             "effect": "Tournament card deployed"
         }
 
-    def attack(self, target) -> dict:
+    def attack(self, target: str) -> dict:
         return {
             "attacker": self.name,
             "target": target,

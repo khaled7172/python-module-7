@@ -4,7 +4,7 @@ from typing import Optional
 
 
 class GameEngine:
-    def __init__(self):
+    def __init__(self) -> None:
         self.factory: Optional[CardFactory] = None
         self.strategy: Optional[GameStrategy] = None
         self.turns = 0

@@ -7,10 +7,10 @@ from ex0.CreatureCard import CreatureCard
 
 
 class Deck():
-    def __init__(self):
+    def __init__(self) -> None:
         self.cards = []
 
-    def add_card(self, card: Card):
+    def add_card(self, card: Card) -> None:
         self.cards.append(card)
 
     def remove_card(self, card_name: str) -> bool:
@@ -20,10 +20,10 @@ class Deck():
                 return True
         return False
 
-    def shuffle(self):
+    def shuffle(self) -> None:
         random.shuffle(self.cards)
 
-    def draw_card(self):
+    def draw_card(self) -> Card:
         if not self.cards:
             raise IndexError("Deck is empty")
         return self.cards.pop()

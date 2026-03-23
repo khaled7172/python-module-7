@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class Combatable(ABC):
     @abstractmethod
-    def attack(self, target) -> dict:
+    def attack(self, target: str) -> dict:
         pass
 
     @abstractmethod
