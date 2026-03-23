@@ -24,9 +24,6 @@ def main() -> None:
     print()
     print("Drawing and playing cards:")
     print()
-    # card = deck.draw_card()
-    # print("Drew: ", card.name)
-    # print("Play result: ", card.play({}))
     for _ in range(3):
         card = deck.draw_card()
         print("Drew:", card.name,

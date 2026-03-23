@@ -3,6 +3,7 @@ from ex4.TournamentPlatform import TournamentPlatform
 
 
 def main() -> None:
+    print()
     print("=== DataDeck Tournament Platform ===")
     print()
     platform = TournamentPlatform()
@@ -12,14 +13,16 @@ def main() -> None:
 
     platform.register_card(dragon)
     platform.register_card(wizard)
+    wizard.rating = 1150
 
     print("Registering Tournament Cards...")
+    print()
     for card in [dragon, wizard]:
         print(f"{card.name} (ID: {card.card_id}):")
         print("  - Interfaces: [Card, Combatable, Rankable]")
         print(f"  - Rating: {card.rating}")
         print(f"  - Record: {card.wins}-{card.losses}")
-    print()
+        print()
 
     print("Creating tournament match...")
     result = platform.create_match("dragon_001", "wizard_001")

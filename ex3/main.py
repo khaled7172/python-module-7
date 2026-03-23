@@ -4,7 +4,9 @@ from ex3.GameEngine import GameEngine
 
 
 def main() -> None:
+    print()
     print("=== DataDeck Game Engine ===")
+    print()
     engine = GameEngine()
     factory = FantasyCardFactory()
     strategy = AggressiveStrategy()
@@ -16,6 +18,7 @@ def main() -> None:
     print()
     print("Simulating aggressive turn...")
     print("Hand:", [f"{c.name} ({c.cost})" for c in engine.hand])
+    print()
     result = engine.simulate_turn()
     print("Turn execution:")
     print("Strategy:", result["strategy"])
@@ -23,6 +26,7 @@ def main() -> None:
     print()
     print("Game Report:")
     print(engine.get_engine_status())
+    print()
     print("Abstract Factory + Strategy Pattern: Maximum flexibility achieved!")
 
 
